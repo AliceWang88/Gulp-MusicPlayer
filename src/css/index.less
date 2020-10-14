@@ -57,9 +57,11 @@ body{
 
         .curTime{
             padding-left:3vw;
+            font-size: 4vw;
         }
         .totalTime{
             padding-right:3vw;
+            font-size: 4vw;
         }
 
         .drag{
@@ -177,4 +179,101 @@ body{
         }
     }
   }
+
 }
+
+@media only screen and (min-width:540px){
+    body{
+        .wrap{
+
+            .pic{
+                width:50vw;
+                height:50vw;
+            }
+            .des{
+
+                h2{
+                   font-size:5vw;
+
+                }
+                .singer{
+                    font-size:3vw;
+               }
+               .album{
+                    font-size:3vw;
+               }
+            }
+            .progress{
+                .curTime{
+                    padding-left:8vw;
+                    font-size: 3vw;
+                }
+                .totalTime{
+                    padding-right:8vw;
+                    font-size: 3vw;
+                }
+
+                .drag{
+                    .backBg,.frontBg{
+                        height:.5vw;
+                    }
+                }
+            }
+
+            .control{
+                height:10vw;
+       
+                li:nth-child(1){
+                    background-size:20%;
+                    &.like{
+                    background-size:20%;
+                }
+                }
+                li:nth-child(2){
+                    background-size:20%;
+                }
+                li:nth-child(3){
+                    background-size:20%;
+                    &.pause{
+                    background-size:20%;
+                }
+                }
+                li:nth-child(4){
+                    background-size:20%;
+                }
+                li:nth-child(5){
+                    background-size:20%;
+                }
+            }
+
+            .songList{
+
+
+                h3{
+                    font-size:3.5vw;
+
+                }
+                ul{
+                    height:7vw*5;
+                    padding:0 3vw;
+                    li{
+                        height:7vw;
+                        font-size:3vw;
+                    }
+                }
+
+                .close{
+                    height:12vw;
+                    line-height:12vw;
+                    font-size:3vw;
+                }
+            }
+    
+          
+    }
+}
+
+}
+
+
+
