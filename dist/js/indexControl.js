@@ -1,0 +1,1 @@
+!function(t){function n(t){this.index=0,this.dataLength=t}n.prototype={prev:function(){return this.getIndex(-1)},next:function(){return this.getIndex(1)},getIndex:function(t){return this.index=(this.index+t+this.dataLength)%this.dataLength,this.index}},t.Index=n}(window.player||(window.player={}));

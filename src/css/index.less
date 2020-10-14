@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style: none;
+}
+body{
+    color:#fff;
+   background:rgba(0,0,0,.2);
+
+   .wrap{
+       position: relative;
+       height:100vh;
+       padding-top:15vw;
+       box-sizing: border-box;
+// 照片
+    .pic{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:70vw;
+        height:70vw;
+        margin:0 auto;
+        border-radius: 50%;
+        background:#000;
+
+        img{
+            width:80%;
+            height:80%;
+            border-radius: 50%;
+        }
+    }
+//    歌曲说明
+   .des{
+       text-align: center;
+    //    border:1px solid red;
+
+       h2{
+           margin-top: 5vh;
+           margin-bottom: 3vh;
+           font-size:7vw;
+           font-weight:normal;
+       }
+       .singer{
+            font-size:4vw;
+       }
+       .album{
+            font-size:4vw;
+       }
+   }
+
+//    进度条
+    .progress{
+        display:flex;
+        margin:8vh 0;
+
+        .curTime{
+            padding-left:3vw;
+        }
+        .totalTime{
+            padding-right:3vw;
+        }
+
+        .drag{
+            flex:1 1 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .dot{
+                position: absolute;
+                left:0;
+                width:2vw;
+                height:2vw;
+                background:#fff;
+                background-clip:padding-box;
+                border:2vw solid transparent;
+                border-radius: 50%;
+            }
+            .backBg,.frontBg{
+                position: absolute;
+                left:3vw;
+                top:50%;
+                transform:translateY(-50%);
+                width:calc(100% - 6vw);
+                height:.7vw;
+                background:rgba(255,255,255,.3);
+            }
+
+            .frontBg{
+                width:0;
+                background:#fff;
+            }
+
+        }
+    }
+
+    // 底部菜单
+    .control{
+        display: flex;
+        position: fixed;
+        bottom:0;
+        width:100%;
+        height:15vw;
+        background:rgba(0,0,0,.5);
+        li{
+            width:20%;
+            height:100%;
+        }
+        li:nth-child(1){
+            background:url('../image/icon-like.png') no-repeat center/30%;
+            &.like{
+                background:url('../image/icon-like-solid.png') no-repeat center/30%;
+            }
+        }
+        li:nth-child(2){
+            background:url('../image/icon-prev.png') no-repeat center/30%;
+        }
+        li:nth-child(3){
+            background:url('../image/icon-play.png') no-repeat center/30%;
+            &.pause{
+                background:url('../image/icon-pause.png') no-repeat center/30%;
+            }
+        }
+        li:nth-child(4){
+            background:url('../image/icon-next.png') no-repeat center/30%;
+        }
+        li:nth-child(5){
+            background:url('../image/icon-playlist.png') no-repeat center/30%;
+        }
+    }
+
+    // 弹出 歌曲列表
+    .songList{
+        position: fixed;
+        bottom:0;
+        width:100%;
+        padding-bottom:15vw;
+        box-sizing: border-box;
+        background:linear-gradient(rgb(5,5,5),gray);
+        transition:all .3s;
+        transform:translateY(12vw+9vw*5+15vw);
+        h3{
+            height:12vw;
+            padding:4vw 4vw;
+            font-weight: normal;
+            font-size:5vw;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        ul{
+            height:9vw*5;
+            padding:0 4vw;
+            overflow: auto;
+            li{
+                height:9vw;
+                line-height:9vw;
+                box-sizing: border-box;
+                font-size:5vw;
+
+                &.active{
+                    color:#008c8c;
+                }
+            }
+        }
+        .close{
+            position: fixed;
+            bottom:0;
+            left:50%;
+            transform:translateX(-50%);
+            height:15vw;
+            line-height:15vw;
+            text-align: center;
+            font-size:4vw;
+            box-sizing: border-box;
+        }
+    }
+  }
+}

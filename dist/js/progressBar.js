@@ -1,0 +1,1 @@
+window.player||(window.player={});
